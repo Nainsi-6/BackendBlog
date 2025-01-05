@@ -183,7 +183,7 @@ async function handleSubscription(event) {
 
   // Send the subscription request to the backend
   try {
-    const response = await fetch('http://localhost:5003/api/subscribe', {
+    const response = await fetch('https://backendblog6.onrender.com/api/subscribe', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -236,7 +236,7 @@ signinBtn.addEventListener('click', async (event) => {
   const email = signinEmail.value;
   const password = signinPassword.value;
 
-  const response = await fetch('http://localhost:5003/api/auth/signin', {
+  const response = await fetch('https://backendblog6.onrender.com/api/auth/signin', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),
@@ -268,7 +268,7 @@ signupBtn.addEventListener('click', async (event) => {
   const email = signupEmail.value;
   const password = signupPassword.value;
 
-  const response = await fetch('http://localhost:5003/api/auth/signup', {
+  const response = await fetch('https://backendblog6.onrender.com/api/auth/signup', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password }),
@@ -291,7 +291,7 @@ signupBtn.addEventListener('click', async (event) => {
  */
 const signoutBtn = document.getElementById('signout-btn');
 signoutBtn.addEventListener('click', async () => {
-  const response = await fetch('http://localhost:5003/api/auth/signout', {
+  const response = await fetch('https://backendblog6.onrender.com/api/auth/signout', {
     method: 'POST',
   });
 

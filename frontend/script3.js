@@ -10,7 +10,7 @@ signupForm.addEventListener('submit', async (event) => {
   console.log('Form Data:', { name, email, password });
 
   try {
-    const response = await fetch('http://localhost:5003/signup', {
+    const response = await fetch('https://backendblog6.onrender.com/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, password }),
