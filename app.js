@@ -186,7 +186,7 @@ app.get('/signup', (req, res) => {
 
 // Protected Blog Route
 app.get('/blog', authMiddleware, (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/blog.html'));
+  res.sendFile(path.join(__dirname, '../frontend/blog.html'));
 });
 
 // Start Server
