@@ -89,7 +89,7 @@ const cors = require('cors');
 
 // Initialize the app
 const app = express();
-const PORT = 5004;
+const PORT = 5003;
 const SECRET_KEY = 'b2d7bd0a58fe5c1a688ce1b5bf8bf89ae9ecb527f5eb47543ef448166ea2e0fcdfc0a581a6ca931711e3c3e27639cc204d9bc899e64dd04ed6570aa79ad19480';
 
 // Middleware
@@ -98,7 +98,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'frontend')));
 
 // MongoDB Connection
-mongoose.connect('mongodb://127.0.0.1:27017/blog', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://nainsigupta2022:nainsi7898@blogapp.pltyn.mongodb.net/', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('Failed to connect to MongoDB:', err));
 
