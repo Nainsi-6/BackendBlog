@@ -90,7 +90,7 @@ const cors = require('cors');
 // Initialize the app
 const app = express();
 const PORT = 5005;
-const SECRET_KEY = 'your-secret-key';
+const SECRET_KEY = 'b2d7bd0a58fe5c1a688ce1b5bf8bf89ae9ecb527f5eb47543ef448166ea2e0fcdfc0a581a6ca931711e3c3e27639cc204d9bc899e64dd04ed6570aa79ad19480';
 
 // Middleware
 app.use(cors());
