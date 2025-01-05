@@ -95,7 +95,7 @@ const SECRET_KEY = 'b2d7bd0a58fe5c1a688ce1b5bf8bf89ae9ecb527f5eb47543ef448166ea2
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 
 // MongoDB Connection
 mongoose.connect('mongodb://127.0.0.1:27017/blog', { useNewUrlParser: true, useUnifiedTopology: true })
@@ -177,16 +177,16 @@ app.post('/api/subscribe', (req, res) => {
 
 // Serve Static Pages
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html')); // Login Page
+  res.sendFile(path.join(__dirname, 'frontend/index.html')); // Login Page
 });
 
 app.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/signup.html'));
+  res.sendFile(path.join(__dirname, 'frontend/signup.html'));
 });
 
 // Protected Blog Route
 app.get('/blog', authMiddleware, (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/blog.html'));
+  res.sendFile(path.join(__dirname, 'frontend/blog.html'));
 });
 
 // Start Server
